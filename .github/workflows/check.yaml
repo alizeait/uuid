@@ -24,9 +24,9 @@ jobs:
           npm install
           npm install -g nyc
       - name: Tests and Coverage
-        run: npm run test -- --converage
+        run: npm run test -- --coverage
       - name: Report to codecov
-        if: matrix.node-version >= 14
+        if: ${{ matrix.node-version }} >= 14
         run: |
           bash <(curl -s https://codecov.io/bash)
         env:
