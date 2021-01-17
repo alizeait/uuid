@@ -24,11 +24,10 @@ jobs:
           npm install
           npm install -g nyc
       - name: Tests and Coverage
-        run: nyc npm test
-      - name: Report codecov
+        run: npm run test -- --converage
+      - name: Report to codecov
         if: matrix.node-version >= 14
         run: |
-          nyc report --reporter=text-lcov > coverage.lcov
           bash <(curl -s https://codecov.io/bash)
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
