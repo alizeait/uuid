@@ -6,7 +6,7 @@ Supports both Nodejs and Browser environments while using native cryptography fe
 
 Includes ESM and Commonjs/Nodejs bundles. Allows bundlers like Webpack and Rollup to pick the correct bundle for different environments.
 
-## Usage
+## Usage 
 
 ```js
 import { v4 } from "@alizeait/uuid";
