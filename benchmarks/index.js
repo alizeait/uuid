@@ -2,7 +2,7 @@ const { Suite } = require("benchmark");
 const isUUID = require("is-uuid");
 const moduleNames = {
   "uuid/v4": require("uuid").v4,
-  "@alizeait/uuid": require("../dist/node/index.node").v4,
+  "@alizeait/uuid": require("../dist/node").v4,
   nanoid: require("nanoid").nanoid,
 };
 console.log("Benchmarks:");

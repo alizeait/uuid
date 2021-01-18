@@ -1,4 +1,4 @@
-import { v4 } from "../src/node/index.node";
+import { v4 } from "../src/node";
 const isUUID = require("is-uuid");
 describe("uuidv4", () => {
   test("should create a uuid", () => {

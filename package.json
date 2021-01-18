@@ -3,37 +3,41 @@
   "version": "1.0.0",
   "description": "A fast and tiny RFC compliant uuid v4 generator",
   "scripts": {
-    "build:node": "microbundle --entry=src/node/index.node.ts --target=web --format cjs -o dist/node/index.node.js --raw true",
-    "build:browser": "microbundle --entry=src/browser/index.browser.ts --target=web --format cjs,es,modern -o dist/browser/index.browser.js --raw true",
+    "build:node": "microbundle --entry=src/node/index.ts --target=web --format cjs -o dist/node/index.js --raw true",
+    "build:browser": "microbundle --entry=src/browser/index.ts --target=web --format cjs,es,modern -o dist/browser/index.js --raw true",
     "build": "npm run build:node && npm run build:browser",
     "dev": "microbundle watch",
     "test": "npx jest"
   },
-  "main": "dist/node/index.node.js",
-  "browser": "dist/browser/index.browser.modern.js",
+  "main": "dist/node/index.js",
+  "browser": "dist/browser/index.modern.js",
   "exports": {
     ".": {
-      "browser": "./dist/browser/index.browser.modern.js",
-      "import": "./dist/node/index.node.js",
-      "require": "./dist/node/index.node.js"
+      "browser": "./dist/browser/index.modern.js",
+      "import": "./dist/node/index.js",
+      "require": "./dist/node/index.js"
     },
     "./node": {
-      "import": "./dist/node/index.node.js",
-      "require": "./dist/node/index.node.js"
+      "import": "./dist/node/index.js",
+      "require": "./dist/node/index.js"
     },
     "./browser": {
-      "browser": "./dist/browser/index.browser.modern.js",
-      "import": "./dist/browser/index.browser.js",
-      "require": "./dist/browser/index.browser.js"
+      "browser": "./dist/browser/index.modern.js",
+      "import": "./dist/browser/index.js",
+      "require": "./dist/browser/index.js"
     },
     "./package.json": "./package.json",
     "./": "./"
   },
-  "types": "dist/browser/index.browser.d.ts",
+  "types": "dist/browser/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alizeait/index.git"
   },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
   "keywords": [
     "uuid",
     "Universally unique identifier",
