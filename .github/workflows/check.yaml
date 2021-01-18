@@ -2,7 +2,7 @@ name: Check
 
 on:
   pull_request:
-  push:
+    branches: [$default-branch, master]
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,6 @@ jobs:
       - name: Install Packages
         run: |
           npm install
-          npm install -g nyc
       - name: Tests and Coverage
         run: npm run test -- --coverage
       - name: Report to codecov
