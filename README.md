@@ -1,4 +1,4 @@
-# @alizeait/uuid ![Check](https://github.com/alizeait/uuid/workflows/Check/badge.svg)
+# @alizeait/uuid ![Check](https://github.com/alizeait/uuid/workflows/Check/badge.svg) ![Coverage](https://img.shields.io/codecov/c/github/alizeait/uuid)
 
 > A tiny (~260B) and [super fast](#benchmarks) [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) compliant v4 UUID generator.
 
@@ -35,5 +35,6 @@ nanoid                ✘
 
 ## Why is `@alizeait/uuid` so fast?
 
-It first fills a large(6144 bytes) `Uint8Array` typed array buffer with cryptographically strong random values using the browser/nodejs crypto API(Meaning that it fills an array randomly with numbers between 0 and 255). It then generates an array of 2 digit hexadecimal numbers(length=256) and starts slicing off chunks from the buffer as needed, meaning that each buffer is able to supply 384 v4 UUID random invocations. When the buffer is all used up, it generates a new one with the crypto APIs and iterates.
-This caching mechanism allows allows for faster composition and generation of the uuids.
+It first fills a large(6144 bytes) `Uint8Array` typed array buffer with cryptographically strong random values using the browser/nodejs crypto API(Meaning that it fills an array buffer randomly with numbers between 0 and 255). It then generates an array of 2 digit hexadecimal numbers(length=256) and starts slicing off chunks from the buffer as needed, meaning that each buffer is able to supply 384 v4 UUID random invocations. When the buffer is all used up, it generates a new one with the crypto APIs and iterates.
+
+This caching mechanism allows for faster composition and generation of the uuids.
