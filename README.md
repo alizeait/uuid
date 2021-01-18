@@ -33,4 +33,7 @@ nanoid                ✘
 
 > Running on Node.js v12.13.0, 64-bit OS, Intel(R) Core(TM) i5-6600K CPU @ 3.50GHz, 16.0 GB RAM
 
-## Why is `@alizeait/uuid` so much faster?
+## Why is `@alizeait/uuid` so fast?
+
+It first fills a large(6144 bytes) `Uint8Array` typed array buffer with cryptographically strong random values using the browser/nodejs crypto API(Meaning that it fills an array randomly with numbers between 0 and 255). It then generates an array of 2 digit hexadecimal numbers(length=256) and starts slicing off chunks from the buffer as needed, meaning that each buffer is able to supply 384 v4 UUID random invocations. When the buffer is all used up, it generates a new one with the crypto APIs and iterates.
+This caching mechanism allows allows for faster composition and generation of the uuids.
