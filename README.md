@@ -11,8 +11,8 @@ Includes ESM and Commonjs/Nodejs bundles. Allows bundlers like Webpack and Rollu
 ```js
 import { v4 } from "@alizeait/uuid";
 
-v4(); //  '9c77776a-6ac7-47d4-94b7-b73c3cecec4b'
-v4(); //  'b0d0d087-87e5-4528-a854-549e9e28289b'
+v4(); //  'dc8c63d6-55e0-49be-9d68-19b0e51be2a6'
+v4(); //  'e3f68a1e-d22b-4c94-bc6b-78b44c1608f3'
 ```
 
 ## Benchmarks
