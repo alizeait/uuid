@@ -6,7 +6,7 @@ Supports both Nodejs and Browser environments while using native cryptography fe
 
 Includes ESM and Commonjs/Nodejs bundles. Allows bundlers like Webpack and Rollup to pick the correct bundle for different environments.
 
-## Usage 
+## Usage
 
 ```js
 import { v4 } from "@alizeait/uuid";
@@ -19,18 +19,14 @@ v4(); //  'b0d0d087-87e5-4528-a854-549e9e28289b'
 
 ```
 uuid/v4               x 1,006,107 ops/sec ±1.04% (82 runs sampled)
-
 @alizeait/uuid        x 4,262,898 ops/sec ±0.98% (87 runs sampled)
-
 nanoid                x 1,779,066 ops/sec ±1.58% (91 runs sampled)
 
 
 RFC UUID v4 validation:
 
 uuid/v4               ✔
-
 @alizeait/uuid        ✔
-
 nanoid                ✘
 
 ```
