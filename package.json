@@ -35,8 +35,7 @@
     "url": "git+https://github.com/alizeait/index.git"
   },
   "files": [
-    "dist",
-    "*.d.ts"
+    "dist"
   ],
   "keywords": [
     "uuid",
