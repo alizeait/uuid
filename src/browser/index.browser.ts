@@ -26,8 +26,8 @@ export function v4() {
   // each digit of a hexadecimal number "maps" to four bits of a binary value.
   // So a byte (8 bits) can always be represented by two hexadecimal digits
   for (; i < 8; i++) {
-    currentBufferValue = buffer[index + i];
-    nextBufferValue = buffer[index + i + 1];
+    currentBufferValue = buffer[index + 2 * i];
+    nextBufferValue = buffer[index + 2 * i + 1];
     if (i === 3)
       //https://digitalbunker.dev/2020/09/30/understanding-how-uuids-are-generated/
       //Take the 7th byte perform an AND operation with 0x0F to clear out the high nibble. Then, OR it with 0x40 to set the version number to 4.
