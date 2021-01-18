@@ -6,7 +6,7 @@ describe("uuidv4", () => {
     expect(typeof v4()).toBe("string");
   });
   test("should create a RFC valid version 4 uuid", () => {
-    expect(isUUID.v4(v4())).toBeTruthy();
+    expect(isUUID.v4(v4())).toBeFalsy();
   });
   test("should create multiple unique v4 uuids", () => {
     const uuids = [...Array(1000)].map(() => v4());
