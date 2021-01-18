@@ -30,6 +30,6 @@ jobs:
       - name: Report to codecov
         if: ${{ matrix.node-version }} >= 14
         run: |
-          bash <(curl -s https://codecov.io/bash)
+          ./node_modules/.bin/codecov --token=${{ secrets.CODECOV_TOKEN }}
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
