@@ -1,4 +1,4 @@
-# @alizeait/uuid ![Check](https://github.com/alizeait/uuid/workflows/Check/badge.svg)
+# @alizeait/uuid ![Check](https://github.com/alizeait/uuid/workflows/Check/badge.svg) ![Coverage](https://img.shields.io/codecov/c/github/alizeait/uuid)
 
 > A tiny (~260B) and [super fast](#benchmarks) [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) compliant v4 UUID generator.
 
