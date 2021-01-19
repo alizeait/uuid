@@ -7,6 +7,11 @@ Supports both Nodejs and Browser environments while using native cryptography fe
 Includes ESM and Commonjs/Nodejs bundles. Allows bundlers like Webpack and Rollup to pick the correct bundle for different environments.
 
 > Check out the [playground](https://wizardly-spence-a7234e.netlify.app/)
+
+## Installation
+```cmd
+$ npm install @alizeait/uuid
+```
 ## Usage
 
 ```js
