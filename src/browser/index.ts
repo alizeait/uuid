@@ -28,11 +28,11 @@ export function v4() {
   for (; i < 8; i++) {
     currentBufferValue = buffer[index + 2 * i];
     nextBufferValue = buffer[index + 2 * i + 1];
-    if (i === 3)
+    if (i == 3)
       //https://digitalbunker.dev/2020/09/30/understanding-how-uuids-are-generated/
       //Take the 7th byte perform an AND operation with 0x0F to clear out the high nibble. Then, OR it with 0x40 to set the version number to 4.
       result += hex[(currentBufferValue & 0x0f) | 0x40] + hex[nextBufferValue];
-    else if (i === 4)
+    else if (i == 4)
       //take the 9th byte and perform an AND operation with 0x3F and then OR it with 0x80
       result += hex[(currentBufferValue & 0x3f) | 0x80] + hex[nextBufferValue];
     else result += hex[currentBufferValue] + hex[nextBufferValue];
