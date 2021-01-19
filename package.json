@@ -32,7 +32,7 @@
   "types": "dist/browser/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alizeait/index.git"
+    "url": "git+https://github.com/alizeait/uuid.git"
   },
   "files": [
     "dist"
