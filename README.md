@@ -9,7 +9,7 @@ Includes ESM and Commonjs/Nodejs bundles. Allows bundlers like Webpack and Rollu
 > Check out the [playground](https://youthful-ritchie-5aa2aa.netlify.app/)
 
 ## Installation
-```cmd
+```bash
 $ npm install @alizeait/uuid
 ```
 ## Usage
