@@ -1,6 +1,6 @@
 {
   "name": "@alizeait/uuid",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "A fast and tiny RFC compliant uuid v4 generator",
   "scripts": {
     "build:node": "microbundle --entry=src/node/index.ts --target=web --format cjs -o dist/node/index.js --raw true",
