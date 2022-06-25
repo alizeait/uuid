@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": "./src",
+    "noEmit": false,
     "moduleResolution": "node",
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "module": "CommonJS"
   },
   "include": ["src/**/*.ts"]
